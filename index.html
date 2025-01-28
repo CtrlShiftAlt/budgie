@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        margin: 100px auto;
+        background-color: #000000;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 10px solid #cccccc;
+        position: relative;
+    }
+    .box > .line {
+        width: 10px;
+        height: 300px;
+        position: absolute;
+        background-color: #cccccc;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .box > .line2 {
+        width: 7px;
+        transform: translate(-50%, 0) rotate(30deg);
+    }
+    .box > .line3 {
+        width: 7px;
+        transform: translate(-50%, 0) rotate(60deg);
+    }
+    .box > .line4 {
+        width: 7px;
+        transform: translate(-50%, 0) rotate(90deg);
+    }
+    .box > .line5 {
+        width: 7px;
+        transform: translate(-50%, 0) rotate(120deg);
+    }
+    .box > .line6 {
+        width: 7px;
+        transform: translate(-50%, 0) rotate(150deg);
+    }
+    .box > .line2 {
+        width: 7px;
+        transform: translate(-50%, 0) rotate(30deg);
+    }
+    .box > .roundness {
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .box > .circle {
+        width: 270px;
+        height: 270px;
+        background-color: #000000;
+    }
+    .box > .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -100%) ;
+    }
+    .box > .hour {
+        width: 10px;
+        height: 70px;
+        background-color: limegreen;
+        border-radius: 5px 5px;
+        
+        /* 设置旋转轴心 */
+        transform-origin: center bottom;
+        /* 添加动画 */
+        /* animation: clockanimation 43200s linear infinite; */
+    }
+    .box > .minute {
+        width: 7px;
+        height: 90px;
+        background-color: yellow;
+        border-radius: 3.5px 3.5px;
+        /* 设置旋转轴心 */
+        transform-origin: center bottom;
+        /* 添加动画 */
+        /* animation: clockanimation 3600s linear infinite; */
+    }
+    .box > .second {
+        width: 4px;
+        height: 110px;
+        background-color: red;
+        border-radius: 2px 2px;
+        /* 设置旋转轴心 */
+        transform-origin: center bottom;
+        /* 添加动画 */
+        /* animation: clockanimation 60s linear infinite; */
+    }
+    @keyframes clockanimation {
+        0% {
+            transform: translate(-50%, -100%);
+        }
+        100% {
+            transform: translate(-50%, -100%) rotate(360deg);
+        }
+    }
+    .cir {
+        width: 20px;
+        height: 20px;
+        background-color: #cccccc;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="line line1"></div>        
+        <div class="line line2"></div>        
+        <div class="line line3"></div>        
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+        <div class="roundness circle"></div>
+        <div class="needle hour"></div>
+        <div class="needle minute"></div>
+        <div class="needle second"></div>
+        <div class="roundness cir"></div>
+    </div>
+</body>
+<script>
+    setInterval (function () {
+        let date = new Date();
+        let sec = date.getSeconds();
+        let min = date.getMinutes();
+        let hour = date.getHours();
+        // 计算各指针对应的角度
+        let secAngle = sec * 6;
+        let minAngle = min * 6 + sec * 0.1;
+        let hourSngle = hour * 30 + min * 0.5;
+        document.getElementsByClassName("second")[0].style.transform = " translate(-50%, -100%) rotate(" + secAngle + "deg)";
+        document.getElementsByClassName("minute")[0].style.transform = " translate(-50%, -100%) rotate(" + minAngle + "deg)";
+        document.getElementsByClassName("hour")[0].style.transform = " translate(-50%, -100%) rotate(" + hourSngle + "deg)";
+    }, 1000);
+</script>
+</html>
