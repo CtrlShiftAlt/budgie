@@ -25,7 +25,7 @@ export default defineConfig({
   
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: 'budgie.webp',
+    logo: '/budgie.webp',
 
     nav: [
       { text: 'Home', link: '/' },
