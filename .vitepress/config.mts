@@ -2,12 +2,18 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  cleanUrls: true,
+
+  sitemap: {
+    hostname: 'https://blog.woostore.top'
+  },
+
   title: "woostore.top",
   description: "woostore.top blogs",
   head: [
     [
       'link',
-      { rel: 'icon', href: '/images/budgie.webp' }
+      { rel: 'icon', href: '/images/budgie.jpg' }
     ],
     [
       'script',
@@ -25,7 +31,7 @@ export default defineConfig({
   
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/images/budgie.webp',
+    logo: '/images/budgie.jpg',
 
     nav: [
       { text: 'Home', link: '/' },
