@@ -13,7 +13,7 @@ export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', href: '/assets/budgie.BC7s474U.jpg' }
+      { rel: 'icon', href: '/budgie.webp' }
     ],
     [
       'script',
@@ -31,7 +31,7 @@ export default defineConfig({
   
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/budgie.BC7s474U.jpg',
+    logo: '/budgie.webp',
 
     nav: [
       { text: 'Home', link: '/' },

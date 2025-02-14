@@ -2,4 +2,4 @@
 
 / test/index.html
 
-![logo](/images/budgie.jpg)
+![logo](/budgie.webp)
