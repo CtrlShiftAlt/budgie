@@ -7,7 +7,7 @@ export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', href: '/budgie.webp' }
+      { rel: 'icon', href: '/images/budgie.webp' }
     ],
     [
       'script',
@@ -25,7 +25,7 @@ export default defineConfig({
   
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/budgie.webp',
+    logo: '/images/budgie.webp',
 
     nav: [
       { text: 'Home', link: '/' },
