@@ -27,6 +27,10 @@ export default defineConfig({
       gtag('js', new Date());
       gtag('config', 'G-N3S0CGYC2B');`
     ],
+    [
+      'meta',
+      { name: 'google-site-verification', content: 'EYRs0kifVXsKH4EgY-d2lfpEA_ngRYOGt9KdAyeNliE' },
+    ],
   ],
   
   themeConfig: {
