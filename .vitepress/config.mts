@@ -50,6 +50,7 @@ export default defineConfig({
           { text: 'Black Friday 2025', link: '/black-friday-2025' },
           { text: 'Embrace the Challenges and Chase Your Dreams', link: '/embrace-the-challenges-and-chase-your-dreams' },
           { text: 'Wired Headphones vs Wireless Headphones', link: '/earphones-wired-vs-wireless' },
+          { text: 'Venice Carnival', link: '/venice-carnival' },
         ]
       }
     ],
