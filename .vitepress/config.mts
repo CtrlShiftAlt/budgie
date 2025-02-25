@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { getItems } from './sidebar.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -32,7 +33,7 @@ export default defineConfig({
       { name: 'google-site-verification', content: 'EYRs0kifVXsKH4EgY-d2lfpEA_ngRYOGt9KdAyeNliE' },
     ],
   ],
-  
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/budgie.webp',
@@ -45,13 +46,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Title',
-        items: [
-          { text: 'Year of the Snake', link: '/year-of-the-snake-in-china' },
-          { text: 'Black Friday 2025', link: '/black-friday-2025' },
-          { text: 'Embrace the Challenges and Chase Your Dreams', link: '/embrace-the-challenges-and-chase-your-dreams' },
-          { text: 'Wired Headphones vs Wireless Headphones', link: '/earphones-wired-vs-wireless' },
-          { text: 'Venice Carnival', link: '/venice-carnival' },
-        ]
+        items: getItems(),
       }
     ],
 
