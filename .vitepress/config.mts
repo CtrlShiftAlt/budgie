@@ -40,7 +40,8 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Blogs', link: '/year-of-the-snake-in-china' }
+      { text: 'Blogs', link: '/year-of-the-snake-in-china' },
+      { text: 'AboutUs', link: '/about-us' }
     ],
 
     sidebar: [
